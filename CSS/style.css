@@ -1,0 +1,586 @@
+:root{
+    --colorOrange : rgb(255, 136, 0);
+    --colorBlanc : #fff;
+    --colorVerte : rgb(0, 177, 103);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.conteneur{
+    padding: 0 5%;
+}
+
+/* le radius */
+.br{
+    border-radius: 0.5rem;
+}
+
+.sh{
+    box-shadow: 2px 2px 5px 2px #00000023;
+}
+
+
+.toggle-link{
+    
+}
+
+
+
+/* ----------------------------------------------
+            LE LOADER
+---------------------------------------------- */
+.loader-page{
+	background: rgb(255, 255, 255);
+	/* cursor: wait; */
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+
+	display: flex;
+    align-items: center ;
+    justify-content: center;
+    z-index: 10;
+}
+
+
+
+/* ---------------------------------------------
+        NAVBAR
+--------------------------------------------- */
+nav .logo{
+    font-weight: bold;
+    color: blue;
+    font-size: 20px;
+}
+
+nav{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    position: sticky;
+    top: -1px;
+
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 2px #00000013;
+    z-index: 10;
+}
+
+/* les lien de la nav */
+nav a.link{
+    padding: 16px 10px;
+    text-decoration: none;
+
+    color: #888888;
+    transition: all  200ms;
+}
+
+nav a:hover {
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    color: #0028ade1;
+    border-bottom: 4px solid #0028ade1;
+}
+
+/* btn-toggle */
+nav .btn-toggle{
+    display: none;
+    font-size: 30px;
+    color: var(--colorOrange);
+    text-decoration: none;
+}
+
+nav .btn-toggle:hover{
+    color: var(--colorOrange);
+    border: none;
+}
+
+/* btn-close */
+nav .close{
+    display: none;
+    font-size: 30px;
+    color: var(--colorOrange);
+    text-decoration: none;
+}
+
+nav .close:hover{
+    color: var(--colorOrange);
+    border: none;
+}
+
+/* ----------------------------------------------
+        HEADER
+---------------------------------------------- */
+header{
+    height: 100vh;
+    display: flex;
+
+    box-shadow: 2px 2px 5px 2px #00000023;
+}
+
+/* header-left */
+header .header-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* background-image: url('../IMAGES/pattern01.png'); */
+    z-index: 2;
+}
+
+header .header-left h1{
+    font-size: 60px;
+    font-weight: bold;
+    animation-name: accueil;
+    animation-duration:  1500ms;
+}
+
+header .header-left p{
+    padding: 10px;
+
+    color: #444444;
+    background-color: #fff;
+}
+
+header .header-left p:nth-child(1){
+    animation-name: accueil;
+    animation-duration:  2000ms;
+}
+
+header .header-left p:nth-child(2){
+    animation-name: accueil;
+    animation-duration:  2150ms;
+}
+
+header .header-left p:nth-child(3){
+    animation-name: accueil;
+    animation-duration:  2300ms;
+}
+
+header .header-left .cont{
+    margin-bottom: 40px;
+}
+
+/* btnnous decouvrir */
+header .header-left a{
+    padding: 15px 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: #fff;
+    border: none;
+    background-color: var(--colorVerte);
+    transition: 200ms;
+    animation-name: accueil;
+    animation-duration:  2300ms;
+}
+
+header .header-left a:hover{
+    font-weight: bold;
+    background-color: var(--colorOrange);
+}
+
+/* header-right */
+header .header-right{
+    width: 50%;
+
+    background-color: var(--colorVerte);
+    /* background-image: url('../IMAGES/portaritBg.png'); */
+    background-image: url('https://img.freepik.com/free-photo/happy-excited-multiethnic-business-students-ready-seminar_1262-12671.jpg?t=st=1730329953~exp=1730333553~hmac=4355732ca0a33bfa50a101bbaaca8564ddec31e979193724a270e8df4e6c1d57&w=900');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+/* marquee */
+marquee{
+    position: absolute;
+    z-index: 2;
+}
+
+@keyframes accueil {
+    0%{
+        position: relative;
+        left: -100%;
+        z-index: 2;
+    }
+
+    50%{
+        position: relative;
+        left: 50px;
+        z-index: 2;
+        transform: scale(1.2);
+    }
+
+    100% {
+        position: relative;
+        z-index: 2;
+        left: 0px;
+    }
+}
+
+
+/* ----------------------------------------------
+            SECTION 
+---------------------------------------------- */
+
+
+/* ----------------------------------------------
+            SECTION DECOUVERTE
+---------------------------------------------- */
+section.decouverte{
+    padding-top: 40px;
+    background-image: url('../IMAGES/patternBg.png');
+}
+
+
+/* decouverte-card image */
+section.decouverte h1{
+    text-align: center;
+   margin-bottom: 20px;
+}
+
+section.decouverte h4{
+   
+}
+
+/* decouverte-card image */
+section.decouverte .decouverte-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.decouverte .decouverte-card h4{
+    font-weight: bold;
+}
+
+/* le contain de decouverte-card */
+
+
+/* contain paddind left */
+section.decouverte .decouverte-card .cont01{
+    text-align: ce;
+}
+
+/* contain paddind left */
+section.decouverte .decouverte-card .cont02{
+    margin-left: 5%;
+}
+
+/* decouverte-card image */
+section.decouverte  .image{
+    height: 50vh;
+    width: 50%;
+    margin-bottom: 40px;
+
+    background-color: var(--colorOrange);
+    background-size: cover;
+    background-position: center;
+    transition: 200ms;
+}
+
+
+section.decouverte  .image:hover {
+    background-position: left;
+}
+
+/* les images */
+section.decouverte  .image.img1{
+    background-image: url('https://img.freepik.com/free-photo/positive-girl-graduating-from-university_7502-9438.jpg?t=st=1730330301~exp=1730333901~hmac=a8b18947b8502dcb70bf7bebcffe9e1eecf098aef6d975e25f59afaa77d31aac&w=900');
+}
+
+section.decouverte  .image.img2{
+    background-image: url('https://img.freepik.com/free-photo/business-professional-explaining-project-details-colleague_74855-1493.jpg?t=st=1730329845~exp=1730333445~hmac=dfcfe235a0d972c44453da35f0cdbc30d044482ad34ad824442d0c2624a58f9d&w=900');
+}
+
+section.decouverte  .image.img3{
+    background-image: url('https://img.freepik.com/free-photo/close-up-delivery-person-giving-parcel-client_23-2149095941.jpg?t=st=1730330579~exp=1730334179~hmac=dd2ec413247fe4ecb558e92f05fc42de6c7a462703c0b409dca12b2ffe75ad50&w=900');
+}
+
+
+
+
+
+/* ----------------------------------------------
+            SECTION APROPOS
+---------------------------------------------- */
+section.apropos{
+    padding-top: 20px;
+
+    color: #000000;
+    background-color: #444;
+    /* background-image: url('../IMAGES/pattern03.png'); */
+    background-color: #0028ade1;
+}
+
+section.apropos h4{
+    padding: 5px;
+    display: inline-block;
+    background-color: #fff;
+}
+
+section.apropos p{
+    padding: 5px;
+    display: inline-block;
+    color: #fff;
+}
+
+section.apropos  .image{
+    height: 50vh;
+    width: 50%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.apropos  .image .img{
+    width: 300px;
+    height:300px;
+
+    /* background-image: url('../IMAGES/portrait.jpg'); */
+    background-color: #000000;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 5px solid var(--colorBlanc);
+    box-shadow: 0px 0px 5px 2px #00000027;
+    transition: 300ms;
+}
+
+section.apropos  .image .img:hover{
+    background-size: 130%;
+}
+
+.apropos-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----------------------------------------------
+            FOOTER
+---------------------------------------------- */
+footer{
+    padding: 20px 5%;
+
+    color: #fff;
+    background-color: #444;
+}
+
+/* ----------------------------------------------
+            LE LOADER
+---------------------------------------------- */
+.loaderPage{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffffe1;
+    z-index: 10;
+}
+
+#loader {
+    border: 12px solid var(--colorVerte);
+    border-radius: 50%;
+    border-top: 12px solid var(--colorOrange);
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+    z-index: 10;
+}
+  
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+
+
+/*---------------------------------------------------
+-----------------------------------------------------
+
+-----------------------------------------------------
+-------------------------------------------------- */
+@media (max-width: 772px) {
+
+    .active-link{
+        background-color: red;
+    }
+    
+    /* ****** NAVBAR ******* */
+    nav{
+        position: fixed;
+    }
+
+    /* logo */
+    nav .logo{
+        position: relative;
+        z-index: 11;
+    }
+
+    /* navbar menu toggle */
+    nav .menu{
+        position: fixed;
+        width: 100%;
+        top: -60px;
+        left: -100%;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 60px 5%;
+        margin-top: 60px;
+
+        background-color: #fff;
+        z-index: 1;
+    }
+
+    nav .menu a.link{
+        padding-left: 0;
+    }
+
+    nav .user a.link{
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        left: 5%;
+        right: 5%;
+        z-index: 11;
+    }
+
+
+    /* btn-toggl navbar */
+    nav .user .btn-toggle{
+        display: block;
+
+        text-decoration: none;
+    }
+
+    /* btn-close */
+    nav .close{
+        top: 10px;
+        right: 5%;
+        position: absolute;
+        display: block;
+
+        text-decoration: none;
+    }
+
+    /* ***************** HEADER **************** */
+    header .header-left h1{
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+
+    /************** SECTION DECOUVERTE *************** */
+    section.decouverte  .image{
+        width: 100%;
+    }
+    
+    /* contain section decouverte */
+    section.decouverte .decouverte-card{
+        margin-right: 0%;
+        padding: 20px;
+        margin-bottom: 20px;
+        
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 0.5rem;
+    }
+    
+    /* contain paddind left */
+    section.decouverte .decouverte-card .cont02{
+        margin-left: 0%;
+    }
+
+    section.decouverte  .image.img1{
+        margin-bottom: 20px;
+    }
+
+    /* **********SECTION APROPOS **************** */
+    section.apropos  .image{
+        height: 50vh;
+        width: 100%;
+    }
+                
+
+    /* **********SECTION FOOTER ********** */
+
+}
+
+
+
+@media (max-width: 600px) {
+    /* le haeder */
+    header .header-right{
+        background: none;
+        display: none;
+    }
+
+    header .header-left{
+        width: 100%;
+        padding-top: 70px;
+        /* display: block; */
+        background-color: var(--colorVerte);
+        background-image: url('https://img.freepik.com/free-photo/happy-excited-multiethnic-business-students-ready-seminar_1262-12671.jpg?t=st=1730329953~exp=1730333553~hmac=4355732ca0a33bfa50a101bbaaca8564ddec31e979193724a270e8df4e6c1d57&w=900');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    /*
+    header .header-left .contain{
+        background-color: #ff9;
+    }
+    */
+
+    header .header-left h1{
+        color: #ffffff;
+        text-align: center;
+        text-shadow: 2px 2px 20px  rgb(0, 0, 0);
+    }
+
+    /* btn header */
+    header .header-left a{    
+        color: #fff;
+        border: none;
+        background-color: rgba(255, 166, 0, 0.705);
+    }
+
+    
+
+}
+
+
+@media (max-width: 772px) {
+    .apropos-card {
+        width: 100%;
+    }
+}
